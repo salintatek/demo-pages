@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
     group: pages
-    cancel-in-progress: true
+    cancel-in-progress: false
 
 jobs:
     build:
@@ -23,16 +23,15 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v6
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2
+            - uses: actions/setup-node@v6
               with:
-                  bun-version: latest
+                  node-version: 24
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v5
 
             - name: Build website
-              run: bunx urmine build
+              run: npx urmine build
 
             - name: Upload build output
               uses: actions/upload-pages-artifact@v4
