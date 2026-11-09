@@ -4,4 +4,4 @@
 
 > demo valid
 
-# Test npm
+# Test pnpm

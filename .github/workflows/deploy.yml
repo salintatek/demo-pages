@@ -23,15 +23,15 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v6
 
-            - uses: actions/setup-node@v6
+            - uses: pnpm/action-setup@v4
               with:
-                  node-version: 24
+                  version: 12
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v5
 
             - name: Build website
-              run: npx urmine build
+              run: pnpm dlx urmine build
 
             - name: Upload build output
               uses: actions/upload-pages-artifact@v4
