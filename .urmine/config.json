@@ -1,0 +1,9 @@
+{
+    "outDir": "dist",
+    "singleQuote": true,
+    "copyButton": false,
+    "autoTranslate": false,
+    "defaultLanguage": "en",
+    "minify": true,
+    "base": "demo-pages"
+}
